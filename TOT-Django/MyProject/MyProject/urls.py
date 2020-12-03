@@ -22,5 +22,10 @@ urlpatterns = [
     path('abt/',views.abts),
     path('rcd/<str:n>/',views.rc),
     path('table/<int:num>/',views.table,name='table'),
+    path('task/<int:num>/',views.task,name='task'),
+    path('sg/<str:name>/<int:id>/',views.sg,name='sg'),
+    path('hello/',views.hello,name='hello'),
+    path('ls/<str:name>/<int:id>/',views.gs,name='sg'),
+
 
 ]

@@ -14,3 +14,16 @@ def table(request,num):
 		data.append(td)
 		print(td)
 	return HttpResponse(request,data)
+def task(request,num):
+	j=""
+	for i in range(1,11):
+		j +="{}*{:02}={:02}".format(num,i,num*i)+"\n"
+	print(j)
+	return HttpResponse(j)
+def sg(request,name,id):
+	return HttpResponse("your name is :{} <br> your id is :{}".format(name,id))
+
+def hello(request):
+	return render(request,'myApp/hello.html')
+def gs(request,name,id):
+	return render(request,'myApp/basic.html',{'n':name,'i':id})
