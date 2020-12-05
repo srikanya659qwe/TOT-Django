@@ -27,3 +27,9 @@ def hello(request):
 	return render(request,'myApp/hello.html')
 def gs(request,name,id):
 	return render(request,'myApp/basic.html',{'n':name,'i':id})
+def sample(request):
+	return render(request,'myApp/sample.html')
+def login(request):
+	return render(request,'myApp/login.html')
+def signup(request):
+	return render(request,'myApp/signup.html')

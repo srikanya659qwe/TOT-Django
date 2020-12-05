@@ -26,6 +26,9 @@ urlpatterns = [
     path('sg/<str:name>/<int:id>/',views.sg,name='sg'),
     path('hello/',views.hello,name='hello'),
     path('ls/<str:name>/<int:id>/',views.gs,name='sg'),
+    path('sample/',views.sample,name='sample'),
+    path('login/',views.login,name='login'),
+    path('signup/',views.signup,name='signup'),
 
 
 ]
