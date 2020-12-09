@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js</title>
+	<style type="text/css">
+		form
+		{
+			margin-left:430px;
+			margin-right: 430px;
+			background-color: cadetblue;
+			border-radius:23px;
+		}
+		input
+		{
+			margin-top:9px;
+			margin-bottom: 9px;
+			margin-left: 73px; 
+		}
+		button
+		{
+			color:green;
+			border-radius: 12px;
+			float:right;
+			margin-left: 100px;
+			padding:9px;
+			background-color: red;
+		}
+	</style>
+	<script type="text/javascript" src="{% static 'js/sample.js'%}"></script>
+	<script type="text/javascript">
+		alert("hi welcome")
+	</script>
+
+</head>
+<body>
+<h4>welcome to jsc file</h4>
+<form>
+	<input type="text" name="n" placeholder="enter your name " id ="n1"><br>
+	<input type="text" name="a" placeholder="enter your age"><br>
+	<input type="submit" onclick="Ad()" vlaue="submit">
+</form>
+<script type="text/javascript">
+	function Ad(){
+		var t= document.getElementById('n1').value
+		alert(t)
+	}
+	
+</script>
+</body>
+</html>

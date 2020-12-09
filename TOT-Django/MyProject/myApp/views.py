@@ -33,3 +33,17 @@ def login(request):
 	return render(request,'myApp/login.html')
 def signup(request):
 	return render(request,'myApp/signup.html')
+def jsc(request):
+	return render(request,'myApp/jsc.html')
+def arth(request):
+	return render(request,'myApp/arth.html',)
+def second(request):
+	return render(request,'myApp/second.html')
+def ar(request):
+	return render(request,'myApp/ar.html')
+def home(request):
+	return render(request,'myApp/home.html')
+def boot(request):
+	return render(request,'myApp/boot.html')
+def reg(request):
+	return render(request,'myApp/reg.html')

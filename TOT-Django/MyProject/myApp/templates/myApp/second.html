@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>math page</title>
+</head>
+<body>
+	<h4>Arthimatic Operations</h4>
+<div class="form fl">
+<form name="myform">
+<p><input type="text" placeholder="Enter A Value" name="num1" class="name-inp"></p>
+          
+<p><input type="text" placeholder="Enter B Value" name="num2" class="name-inp"></P>
+               <p><input type="submit" value="Add"  class="sub" onclick="add()">
+                <input type="submit" value="Sub"  class="sub" onclick="sub()">
+                <input type="submit" value="Mul"  class="sub" onclick="mul()">
+                <input type="submit" value="Div"  class="sub" onclick="div()">
+               </p>
+               <p class="name">Output Is :</p>
+<p>
+<input type="text" name="result" class="name-inp"  readonly>
+</p>
+           </form>
+       </div>
+   </div>
+</div>
+<script type="text/javascript">
+function add(){
+num1=parseInt(myform.num1.value);
+num2=parseInt(myform.num2.value);
+result=num1+num2;
+myform.result.value=result;
+
+}
+function sub(){
+num1=parseInt(myform.num1.value);
+num2=parseInt(myform.num2.value);
+result=num1-num2;
+myform.result.value=result;
+
+}
+function mul(){
+num1=parseInt(myform.num1.value);
+num2=parseInt(myform.num2.value);
+result=num1*num2;
+myform.result.value=result;
+
+}
+function div(){
+num1=parseInt(myform.num1.value);
+num2=parseInt(myform.num2.value);
+result=num1/num2;
+myform.result.value=result;
+
+}
+</script>
+</body>
