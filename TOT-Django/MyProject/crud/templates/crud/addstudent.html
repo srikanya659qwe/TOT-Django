@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Crud operations</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container card card-body bg-primary col-md-4">	
+			<h1 class="alert alert-info">Add Student</h1>	
+		<form action="#" method="POST">
+			{% csrf_token %}
+			<div class="form-group">
+				<label for="sname">StudentName*</label>
+				<input type="text" name="name" placeholder="Enter StudentName" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="sroll">Student Rollnumber*</label>
+				<input type="number" name="rollno" placeholder="Enter Student Rollnumber"class="form-control ">
+			</div>
+			<div class="form-group">
+				<label for="sage">Student Age*</label>
+				<input type="number" name="age"placeholder="Enter Student Age" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="snum">Student Mobile Number*</label>
+				<input type="number" name="mobileno" placeholder="Enter Student Mobile number" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="smail">Student Mail*</label>
+				<input type="email" name="email" placeholder="Enter Student Email" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="sadd">Student Adress*</label>
+				<input type="textarea" name="adress" placeholder="Enter Student Adress" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Gender</label>
+				<input type="radio" name="gender" value="male">Male
+				<input type="radio" name="gender" value="female">FeMale
+				
+			</div>
+			<div class="form-group">
+				<label for="br">Branch</label>
+				<select name="branch" id="br" class="custom-select">
+					<option>Choose...</option>
+					<option value="cse">CSE</option>
+					<option value="ece">ECE</option>
+					<option value="mech">MECH</option>
+					<option value="mme">MME</option>
+				</select>
+				
+			</div>
+			<div class="form-group">
+				<label class="checkbox-inline">Languages</label>
+				<input type="checkbox" name="language" value="Telugu">Telugu
+			
+				<label class="checkbox-inline">
+					<input type="checkbox" name="language" value="Hindi">Hindi
+				</label>
+				<label class="checkbox-inline">
+					<input type="checkbox" name="language" value="English">English
+				</label>
+			</div>
+			<input type="submit" name="Add" class="btn btn-outline-danger btn-lg">
+
+		</form>
+
+	</div>
+</body>

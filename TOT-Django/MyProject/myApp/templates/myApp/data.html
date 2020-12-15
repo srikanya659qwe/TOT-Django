@@ -1,0 +1,86 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<form method="POST">
+		{% csrf_token %}
+		<div class="container">
+		<div class="card">
+			<div class="card-body mt-5 mx-auto col-md-6">
+				<h3 class="bg-dark text-white text-center p-2 border rounded">Registration form</h3>
+			<input type="text" name="uname" placeholder="enter your name" class="form-control my-3 col-md-10 mx-auto">
+			<input type="mail" name="ml" placeholder="enter your Mail" class="form-control my-3 col-md-10 mx-auto">
+			<input type="number" name="num" placeholder="enter your Mobile number" class="form-control my-3 col-md-10 mx-auto">
+			<input type="password" name="ps" placeholder="enter your password" class="form-control my-3 col-md-10 mx-auto">
+			<input type="password" name="cps" placeholder="enter your Confirm Password" class="form-control my-3 col-md-10 mx-auto">
+			<label for="birthdaytime">DOB:</label>
+  				<input type="datetime-local" id="birthdaytime" name="birthdaytime"class="form-control my-3 col-md-10 mx-auto">
+  			<h6 class="text-left">Gender:</h6>
+				<div class="form-group">
+					<label class="form-check form-check-inline">
+		  				<input class="form-check-input" type="radio" name="gender" value="female" >
+		  			<span class="form-check-label"> Male </span>
+					</label>
+					<label class="form-check form-check-inline">
+		  				<input class="form-check-input" type="radio" name="gend" value="option">
+		  				<span class="form-check-label"> Female</span>
+					</label>
+				</div>
+
+				<div class="form-row">
+					<div class="form-group col-md-6">
+		  				<label>City</label>
+		  			<input type="text" class="form-control my-3 col-md-10 mx-auto">
+					</div> 
+				<div class="form-group col-md-6">
+		  			<label>Select Your Country</label>
+		 				 <select id="inputState" class="form-control my-3 col-md-10 mx-auto">
+		    					<option> Choose...</option>
+		      					<option>Uzbekistan</option>
+		      					<option>Russia</option>
+		      					<option>United States</option>
+		      					<option selected="">India</option>
+		      					<option>Afganistan</option>
+		    				</select>
+		 		</div>
+
+		 		<div class="custom-file" id="customFile" lang="es">
+        			<input type="file"  name="f" class="custom-file-input" id="exampleInputFile" aria-describedby="fileHelp" class="form-control my-3 col-md-10 mx-auto">
+       				 <label class="custom-file-label" for="exampleInputFile">
+           				Select file...
+        			</label>
+        		</div><br><br><br><br>
+
+  				<h6 class="text-left ">What is your favourite color: </h6><br>
+		<div class="form-check">
+  			<label class="form-check-label">
+    			<input type="checkbox" class="form-check-input" value="" class="form-control my-3 col-md-10 mx-auto">Green
+  			</label>
+		</div>
+		<div class="form-check">
+  			<label class="form-check-label">
+    			<input type="checkbox" class="form-check-input" value="" disabled="" class="form-control my-3 col-md-10 mx-auto">Red
+  			</label>
+		</div>
+		<div class="form-check">
+  			<label class="form-check-label">
+    			<input type="checkbox" class="form-check-input" value="" class="form-control my-3 col-md-10 mx-auto">Blue
+  			</label><br><br>
+	</div>
+
+			<div class="form-group">
+  		<label for="exampleFormControlTextarea2">Comments</label>
+  		<textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3"></textarea>
+	</div>
+			<input type="submit" name="login" class="btn btn-primary btn-block">
+
+	</form>
+</body>
+	

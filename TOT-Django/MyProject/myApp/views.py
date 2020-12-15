@@ -47,3 +47,42 @@ def boot(request):
 	return render(request,'myApp/boot.html')
 def reg(request):
 	return render(request,'myApp/reg.html')
+def regi(request):
+	if request.method=="POST":
+		u=request.POST['uname']
+		ps=request.POST['pswd']
+		if u==ps:
+
+		#print(u,ps)
+		#return HttpResponse('successfully login')
+			return render(request,'myApp/details.html',{'us':u})	
+		else:
+			return HttpResponse("oops!!!!")
+	return render(request,'myApp/regi.html')
+def valid(request):
+	if request.method=="POST":
+		u=request.POST['uname']
+		ps=request.POST['pswd']
+		if u== "srikanya" and ps=="apssdc":
+
+		#print(u,ps)
+		#return HttpResponse('successfully login')
+			return render(request,'myApp/details.html',{'us':u})	
+		else:
+			return HttpResponse("oops!!!!")
+	return render(request,'myApp/regi.html')
+def data(request):
+	if request.method=="POST":
+		u=request.POST['uname']
+		m=request.POST['ml']
+		ph=request.POST['num']
+		p=request.POST['ps']
+		cp=request.POST['cps']
+		db=request.POST['birthdaytime']
+		fl=request.POST['f']
+		ma=request.POST['gender']
+		#tx=request.POST['tt']
+
+		#print(u,m,ph,p,cp,db,fl)
+		return render(request,'myApp/details2.html',{'us':u,'mail':m,'phone':ph,'pass':p,'cpass':cp,'date':db,'fi':fl,'male':ma})
+	return render(request,'myApp/data.html')
