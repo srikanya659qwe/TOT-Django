@@ -1,0 +1,26 @@
+{% extends 'newApp/base.html'%}
+{% block title %} Login {% endblock %}
+{% block content %}
+<div class="container">
+	{% if messages %}
+	{% for msg in messages %}
+		<div class="alert alert-{{msg.tags}} alert-dismissible">
+  			<button type="button" class="close" data-dismiss="alert">&times;</button>
+  				{{msg}}
+		</div>
+	{% endfor %}
+	{% endif %}
+  <div class="card mt-4 col-md-6 mx-auto">
+    <h2 class="bg-warning text-white text-center mx-2 my-2 p-2 border rounded">This is Login page</h2>
+    <form method="POST">
+    	{% csrf_token %}
+    	<div class='form-group mx-3'>
+    		<input type="text" name="username" placeholder="enter username" class="form-control my-2">
+    		<input type="password" name="password" placeholder="enter password" class="form-control my-2">
+    		<input type="submit" name="submit" value="Login" class="btn btn-success btn-block">
+    		
+    	</div>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'newApp/base.html'%}
+{% block title %} Mailsending {% endblock %}
+{% block content %}
+<div class="container">
+	{% if messages %}
+	{% for msg in messages %}
+		<div class="alert alert-{{msg.tags}} alert-dismissible">
+  			<button type="button" class="close" data-dismiss="alert">&times;</button>
+  				{{msg}}
+		</div>
+	{% endfor %}
+	{% endif %}
+  <div class="card col-md-6 mx-auto mt-3">
+    	<h2 class="bg-warning text-white text-center p-2 border rounded my-2 ">MailSending</h2>
+    	<div class="card-body">
+    		<form method="POST">
+    			{% csrf_token %}
+    			<input type="text" name="rcv" class="form-control my-2" placeholder="enter your mail">
+    			<input type="text" name="sub" class="form-control my-2"placeholder="enter subject">
+    			<textarea name="msg"class="form-control my-2" rows="5" cols="10" placeholder="enter text here"></textarea>
+    			<input type="submit" name="submit" value="save" class="btn btn-primary">
+    		</form>
+    	</div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'newApp/base.html'%}
+{% block title %} Logout {% endblock %}
+{% block content %}
+<div class="container">
+  <div class="card col-md-6 mt-3">
+    <h2 class="bg-dark text-white text-center mx-2 my-2 p-2 border rounded">This is logout page</h2>
+    <h3>Are you sure you login again</h3><a href="{% url 'login' %}" class="btn btn-info mb-3">login again</a>
+  </div>
+</div>
+{% endblock %}

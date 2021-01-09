@@ -44,6 +44,12 @@ def update(request,id):
 		gender=request.POST['gender']
 		branch=request.POST['branch']
 		language=request.POST.getlist('language')
+		lan=""
+		for la in language:
+			if language.index(la)==0:
+				lan+=la
+			else:
+				lan+=','+la
 		data.name=name
 		data.rollno=rollno
 		data.age=age
@@ -52,7 +58,7 @@ def update(request,id):
 		data.adress=adress
 		data.gender=gender
 		data.branch=branch
-		data.language=language
+		data.language=lan
 		data.save()
 		#return HttpResponse("successfully updated")
 		return redirect('/crud/display')

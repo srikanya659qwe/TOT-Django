@@ -1,0 +1,29 @@
+{% extends 'newApp/base.html'%}
+{% block title %} Update {% endblock %}
+{% block content %}
+<div class="container">
+	<div class="card mt-3 col-md-7 mx-auto">
+    	<h2 class="bg-secondary text-center text-white border rounded">Update page</h2>
+    <div class="card-body">
+    	<form method="POST" enctype="multipart/form-data">
+    		{% csrf_token %}
+    		<table class="table table-borderless">
+    			{% for i in c %}
+    			<tr>
+    				<td>{{i}}</td>
+    			</tr>
+    			{% endfor %}
+    			{% for j in y %}
+    			<tr>
+    				<td>{{j}}</td>
+    			</tr>
+    			{% endfor %}
+    		</table>
+    		
+    		<input type="submit" name="submit" value="update" class="btn btn-primary">
+    	</form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
